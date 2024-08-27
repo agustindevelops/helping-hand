@@ -2,7 +2,6 @@
 
 import React from "react";
 import * as Icon from "react-feather";
-import Link from "next/link";
 
 const Features = () => {
   return (
@@ -21,11 +20,7 @@ const Features = () => {
                 <div className="icon">
                   <Icon.TrendingUp />
                 </div>
-                <h3>
-                  <Link href="/features/ai-strategy-development">
-                    AI Strategy Development
-                  </Link>
-                </h3>
+                <h3>AI Strategy Development</h3>
                 <p>
                   Develop a clear and actionable AI strategy tailored to drive
                   your business success, from conceptualization to execution.
@@ -44,11 +39,7 @@ const Features = () => {
                 <div className="icon">
                   <Icon.Cpu />
                 </div>
-                <h3>
-                  <Link href="/features/custom-ai-solutions">
-                    Custom AI Solutions
-                  </Link>
-                </h3>
+                <h3>Custom AI Solutions</h3>
                 <p>
                   Tailor-made AI applications that solve specific challenges,
                   enhance efficiency, and create new opportunities for
@@ -68,11 +59,7 @@ const Features = () => {
                 <div className="icon">
                   <Icon.Database />
                 </div>
-                <h3>
-                  <Link href="/features/data-infrastructure-management">
-                    Data Infrastructure and Management
-                  </Link>
-                </h3>
+                <h3>Data Infrastructure and Management</h3>
                 <p>
                   Build and manage a scalable and secure data infrastructure to
                   support your AI initiatives, ensuring optimal performance.
@@ -91,11 +78,7 @@ const Features = () => {
                 <div className="icon">
                   <Icon.Shield />
                 </div>
-                <h3>
-                  <Link href="/features/ai-governance-ethics">
-                    AI Governance and Ethics
-                  </Link>
-                </h3>
+                <h3>AI Governance and Ethics</h3>
                 <p>
                   Ensure responsible use of AI with robust governance frameworks
                   and ethical guidelines that protect both your business and

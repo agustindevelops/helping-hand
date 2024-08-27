@@ -5,19 +5,22 @@ import Link from "next/link";
 import Image from "next/image";
 
 import contactImg from "/public/images/contact-img.png";
+import axios from "axios";
+
+const DEFAULT = {
+  fullName: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+  agreeTerms: false,
+};
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    number: "",
-    subject: "",
-    message: "",
-    agreeTerms: false,
-  });
+  const [formData, setFormData] = useState(DEFAULT);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -30,10 +33,17 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form data submitted:", formData);
+    try {
+      const { status } = await axios.post("/api/inquire", formData);
+
+      if (status === 200) {
+        setFormData(DEFAULT);
+      }
+    } catch (error) {
+      console.error("Failed to submit inquiry:", error);
+    }
   };
 
   return (
@@ -58,10 +68,10 @@ const ContactForm: React.FC = () => {
                     <div className="form-group">
                       <input
                         type="text"
-                        name="name"
+                        name="fullName"
                         placeholder="Your Name"
                         className="form-control"
-                        value={formData.name}
+                        value={formData.fullName}
                         onChange={handleChange}
                         required
                       />
@@ -86,10 +96,10 @@ const ContactForm: React.FC = () => {
                     <div className="form-group">
                       <input
                         type="text"
-                        name="number"
+                        name="phone"
                         placeholder="Your phone number"
                         className="form-control"
-                        value={formData.number}
+                        value={formData.phone}
                         onChange={handleChange}
                         required
                       />
@@ -138,14 +148,8 @@ const ContactForm: React.FC = () => {
                         htmlFor="flexCheckDefault"
                       >
                         By checking this, you agree to our{" "}
-                        <Link href="/terms-conditions" >
-                          Terms
-                        </Link>{" "}
-                        and{" "}
-                        <Link href="/privacy-policy" >
-                          Privacy policy
-                        </Link>
-                        .
+                        <Link href="/terms-conditions">Terms</Link> and{" "}
+                        <Link href="/privacy-policy">Privacy policy</Link>.
                       </label>
                     </div>
                   </div>

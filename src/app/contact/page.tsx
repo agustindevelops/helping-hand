@@ -11,15 +11,7 @@ export default function Page() {
     <>
       <Navbar />
 
-      <PageBanner pageTitle="Contact Us" />
-
-      <ContactInfo />
-
-      <GoogleMap />
-
       <ContactForm />
-
-      <Footer />
     </>
   );
-};
+}

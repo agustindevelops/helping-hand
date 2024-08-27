@@ -40,31 +40,23 @@ const Navbar: React.FC = () => {
       <header id="header" className="headroom">
         <div className="startp-nav">
           <div className="container">
-            <nav className="navbar navbar-expand-md navbar-light">
-              <Link href="/" className="navbar-brand">
-                <Image src={logo} alt="logo" width={110} height={36} />
-              </Link>
-
-              <button
-                onClick={toggleNavbar}
-                className={classTwo}
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+            <nav className="navbar navbar-expand-md navbar-light d-flex align-items-center">
+              <Link
+                href="/"
+                className="navbar-brand d-flex align-items-center gap-4"
               >
-                <span className="icon-bar top-bar"></span>
-                <span className="icon-bar middle-bar"></span>
-                <span className="icon-bar bottom-bar"></span>
-              </button>
+                <Image src={logo} alt="logo" width={64} height={64} />
+                <p className="d-flex md:flex-column gap-1">
+                  <span>Helping Hand</span>
+                  <span>AI Solutions</span>
+                </p>
+              </Link>
 
               <div className={classOne} id="navbarSupportedContent"></div>
 
               {/* Others option */}
-              <div className="others-option">
-                <Link href="/login/" className="btn btn-primary">
+              <div className="others-optio">
+                <Link href="/contact/" className="btn btn-primary">
                   Contact Us
                 </Link>
               </div>
