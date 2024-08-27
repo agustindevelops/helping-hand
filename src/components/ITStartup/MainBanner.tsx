@@ -51,7 +51,12 @@ const HeroBanner: React.FC = () => {
                       data-aos-delay="200"
                       data-aos-duration="500"
                       data-aos-once="true"
-                    >For your AI challenges, Helping Hand AI Solutions is here to lend a helping hand—streamlining processes, boosting efficiency, and empowering your growth. Let's innovate together!</p>
+                    >
+                      For your AI challenges, Helping Hand AI Solutions is here
+                      to lend a helping hand—streamlining processes, boosting
+                      efficiency, and empowering your growth. Let`&apos;s
+                      innovate together!
+                    </p>
 
                     <Link
                       href="/contact"
@@ -60,7 +65,6 @@ const HeroBanner: React.FC = () => {
                       data-aos-delay="300"
                       data-aos-duration="500"
                       data-aos-once="true"
-                      
                     >
                       Get Started
                     </Link>
@@ -222,7 +226,7 @@ const HeroBanner: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default HeroBanner;
