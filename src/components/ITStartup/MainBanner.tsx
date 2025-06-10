@@ -4,28 +4,27 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import man from "/public/images/banner-image/man.png";
-import code from "/public/images/banner-image/code.png";
-import carpet from "/public/images/banner-image/carpet.png";
-import bin from "/public/images/banner-image/bin.png";
-import book from "/public/images/banner-image/book.png";
-import dekstop from "/public/images/banner-image/dekstop.png";
-import dot from "/public/images/banner-image/dot.png";
-import flowerTopBig from "/public/images/banner-image/flower-top-big.png";
-import flowerTop from "/public/images/banner-image/flower-top.png";
-import keyboard from "/public/images/banner-image/keyboard.png";
-import pen from "/public/images/banner-image/pen.png";
-import table from "/public/images/banner-image/table.png";
-import teaCup from "/public/images/banner-image/tea-cup.png";
-import headphone from "/public/images/banner-image/headphone.png";
-import mainPic from "/public/images/banner-image/main-pic.png";
+const man = "/images/banner-image/man.png";
+const code = "/images/banner-image/code.png";
+const carpet = "/images/banner-image/carpet.png";
+const bin = "/images/banner-image/bin.png";
+const book = "/images/banner-image/book.png";
+const dekstop = "/images/banner-image/dekstop.png";
+const dot = "/images/banner-image/dot.png";
+const flowerTopBig = "/images/banner-image/flower-top-big.png";
+const flowerTop = "/images/banner-image/flower-top.png";
+const keyboard = "/images/banner-image/keyboard.png";
+const pen = "/images/banner-image/pen.png";
+const table = "/images/banner-image/table.png";
+const teaCup = "/images/banner-image/tea-cup.png";
+const headphone = "/images/banner-image/headphone.png";
+const mainPic = "/images/banner-image/main-pic.png";
 
-// Shape Images
-import shape1 from "/public/images/shape1.png";
-import shape2 from "/public/images/shape2.svg";
-import shape3 from "/public/images/shape3.svg";
-import shape4 from "/public/images/shape4.svg";
-import shape5 from "/public/images/shape5.png";
+const shape1 = "/images/shape1.png";
+const shape2 = "/images/shape2.svg";
+const shape3 = "/images/shape3.svg";
+const shape4 = "/images/shape4.svg";
+const shape5 = "/images/shape5.png";
 
 const HeroBanner: React.FC = () => {
   return (
