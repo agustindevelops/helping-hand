@@ -1,4 +1,4 @@
-import { projects } from '@/data/PROJECT';
+import { PROJECTS } from '@/data/PROJECT';
 import React from 'react';
 import ProjectCard from './Project/Card';
 
@@ -14,7 +14,7 @@ const Projects = () => {
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {PROJECTS.map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
         </div>
