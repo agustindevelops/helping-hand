@@ -1,11 +1,10 @@
-import React from 'react';
 import { Project } from '@/data/PROJECT';
 
-const ProjectCard: React.FC<Project> = ({ id, title, description, tags, gradient, icon }) => {
-  return (
+const ProjectCard: React.FC<Project> = ({ title, description, tags, icon, gradient }) => {
+   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
       <div 
-        className={`h-48 flex items-center justify-center bg-gradient-to-r from-${gradient.from} to-${gradient.to}`}
+        className={`h-48 flex items-center justify-center bg-gradient-to-r ${gradient.from} ${gradient.to}`}
       >
         {icon && (
           <svg className="w-24 h-24 text-white" fill="currentColor" viewBox="0 0 20 20">

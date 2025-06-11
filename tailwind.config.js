@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  content: ['./src/**/*.{ts,tsx,html}'],
+  safelist: [
+    {
+      pattern: /(from|to)-(blue|indigo|rose|fuchsia|lime|emerald)-(400|500)/,
+    },
   ],
-  darkMode: "class",
-  theme: {
-    extend: {},
-  },
-  plugins: [],
 };
