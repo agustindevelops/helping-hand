@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Services = () => {
@@ -99,9 +100,9 @@ const Services = () => {
               <p className="mt-3 text-gray-100">
                 Don't see what you need? We build custom AI solutions tailored to your unique business challenges.
               </p>
-              <button className="mt-6 px-4 py-2 bg-white text-indigo-600 rounded-md font-medium hover:bg-gray-100 transition-colors">
+              <Link href="/contact" className="mt-6 px-4 py-2 bg-white text-indigo-600 rounded-md font-medium hover:bg-gray-100 transition-colors inline-block">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
