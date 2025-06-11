@@ -46,13 +46,13 @@ const HeroBanner: React.FC = () => {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
-                href="https://bdmbc5xfgbecmre2.canva-hosted-embed.com/codelet/AAEAEGJkbWJjNXhmZ2JlY21yZTIAAAAAAZdhRNMCJkIy9e3aCwob_qWR7_35e1Y27CuNAxakK2hMk_GL67g/#contact" 
+                href="/contact" 
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm"
               >
                 Get a Free Consultation
               </a>
               <a 
-                href="https://bdmbc5xfgbecmre2.canva-hosted-embed.com/codelet/AAEAEGJkbWJjNXhmZ2JlY21yZTIAAAAAAZdhRNMCJkIy9e3aCwob_qWR7_35e1Y27CuNAxakK2hMk_GL67g/#projects" 
+                href="#projects" 
                 className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 shadow-sm"
               >
                 Explore Our Work
