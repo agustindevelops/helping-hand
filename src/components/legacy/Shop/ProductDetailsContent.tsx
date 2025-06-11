@@ -1,9 +1,9 @@
 "use client";
   
 import React from "react"; 
-import ProductsDetailsTabs from "../../components/Shop/ProductsDetailsTabs";
+import ProductsDetailsTabs from "./ProductsDetailsTabs";
 import * as Icon from "react-feather";
-import PaymentOption from "../../components/Shop/PaymentOption";
+import PaymentOption from "./PaymentOption";
 import ProductSlider from "./ProductSlider";
 import QuantityInput from "./QuantityInput";
 

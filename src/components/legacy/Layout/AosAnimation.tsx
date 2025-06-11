@@ -2,7 +2,7 @@
 
 import React from "react";
 import AOS from "aos";
-import "../../../node_modules/aos/dist/aos.css";
+import "../../../../node_modules/aos/dist/aos.css";
   
 const AosAnimation = () => {
  

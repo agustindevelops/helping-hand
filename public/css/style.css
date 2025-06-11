@@ -702,7 +702,6 @@ Main Banner CSS
   position: relative;
   height: 910px;
   z-index: 1;
-  background: transparent url("/images/banner-bg1.jpg") right top no-repeat;
 }
 .main-banner .hero-content h1 {
   font-size: 45px;

@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../../components/Layout/Navbar";
-import Footer from "../../components/Layout/Footer";
-import PageBanner from "../../components/Common/PageBanner";
-import ContactInfo from "../../components/Contact/ContactInfo";
-import GoogleMap from "../../components/Contact/GoogleMap";
-import ContactForm from "../../components/Contact/ContactForm";
+import Navbar from "../../components/legacy/Layout/Navbar";
+import Footer from "../../components/legacy/Layout/Footer";
+import PageBanner from "../../components/legacy/Common/PageBanner";
+import ContactInfo from "../../components/legacy/Contact/ContactInfo";
+import GoogleMap from "../../components/legacy/Contact/GoogleMap";
+import ContactForm from "../../components/legacy/Contact/ContactForm";
 
 export default function Page() {
   return (
