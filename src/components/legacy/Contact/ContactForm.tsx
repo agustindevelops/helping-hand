@@ -1,51 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import React from "react";
 import Image from "next/image";
-
 import contactImg from "/public/images/contact-img.png";
-import axios from "axios";
-
-const DEFAULT = {
-  fullName: "",
-  email: "",
-  phone: "",
-  subject: "",
-  message: "",
-  agreeTerms: false,
-};
+import FreeConsultation from "@/components/Form/FreeConsultation";
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState(DEFAULT);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.checked,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const { status } = await axios.post("/api/inquire", formData);
-
-      if (status === 200) {
-        setFormData(DEFAULT);
-      }
-    } catch (error) {
-      console.error("Failed to submit inquiry:", error);
-    }
-  };
-
   return (
     <>
       <div className="contact-area ptb-80">
@@ -53,7 +13,7 @@ const ContactForm: React.FC = () => {
           <div className="section-title">
             <h2>Get In Touch With Us</h2>
             <div className="bar"></div>
-            <p>Anything On your Mind. We’ll Be Glad To Assist You!</p>
+            <p>Anything On your Mind. We'll Be Glad To Assist You!</p>
           </div>
 
           <div className="row align-items-center">
@@ -62,105 +22,7 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div className="col-lg-6 col-md-12">
-              <form onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-lg-12 col-md-12">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="fullName"
-                        placeholder="Your Name"
-                        className="form-control"
-                        value={formData.fullName}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-12 col-md-12">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="email"
-                        placeholder="Your email address"
-                        className="form-control"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="phone"
-                        placeholder="Your phone number"
-                        className="form-control"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-6 col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        name="subject"
-                        placeholder="Your Subject"
-                        className="form-control"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="col-lg-12 col-md-12">
-                    <div className="form-group">
-                      <textarea
-                        name="message"
-                        cols={30}
-                        rows={5}
-                        placeholder="Write your message..."
-                        className="form-control"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-check">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        name="agreeTerms"
-                        checked={formData.agreeTerms}
-                        onChange={handleCheckboxChange}
-                        id="flexCheckDefault"
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor="flexCheckDefault"
-                      >
-                        By checking this, you agree to our{" "}
-                        <Link href="/terms-conditions">Terms</Link> and{" "}
-                        <Link href="/privacy-policy">Privacy policy</Link>.
-                      </label>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-12 col-sm-12">
-                    <button type="submit" className="btn btn-primary">
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <FreeConsultation />
             </div>
           </div>
         </div>
