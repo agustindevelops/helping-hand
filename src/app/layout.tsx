@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/next"
 import "../../public/css/bootstrap.min.css";
 import "animate.css";
 import "../../public/css/boxicons.min.css";
@@ -6,6 +7,7 @@ import "../../public/css/flaticon.css";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "swiper/css";
 import "swiper/css/bundle";
+
 
 // Global Style
 import "../../public/css/style.css";
@@ -43,7 +45,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         {children}
-
+        <Analytics />
         <AosAnimation />
 
         <GoTop />
