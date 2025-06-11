@@ -4,7 +4,7 @@ import React from "react";
 import * as Icon from "react-feather";
 import Image from "next/image";
 import Link from "next/link";
-import BlogSidebar from "../../components/Blog/BlogSidebar";
+import BlogSidebar from "./BlogSidebar";
 
 import blogImg1 from "/public/images/blog-image/blog1.jpg";
 import blogImg2 from "/public/images/blog-image/blog2.jpg";
@@ -13,22 +13,17 @@ import blogImg4 from "/public/images/blog-image/blog4.jpg";
 import blogImg5 from "/public/images/blog-image/blog5.jpg";
 import blogImg6 from "/public/images/blog-image/blog6.jpg";
 
-// Shape Images
-import shape1 from "/public/images/shape1.png";
-import shape3 from "/public/images/shape3.svg";
-import shape4 from "/public/images/shape4.svg";
-
-const BlogWithRightSidebarStyle3 = () => {
+const BlogWithRightSidebar = () => {
   return (
     <>
       <div className="blog-area ptb-80">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 col-md-12">
-              <div className="row">
+              <div className="row justify-content-center">
                 <div className="col-lg-6 col-md-6">
-                  <div className="single-blog-post-item">
-                    <div className="post-image">
+                  <div className="single-blog-post">
+                    <div className="blog-image">
                       <Link href="/blog/blog-details/" >
                         <Image
                           src={blogImg1}
@@ -37,37 +32,46 @@ const BlogWithRightSidebarStyle3 = () => {
                           height={700}
                         />
                       </Link>
+
+                      <div className="date">
+                        <Icon.Calendar /> March 15, 2022
+                      </div>
                     </div>
 
-                    <div className="post-content">
-                      <ul className="post-meta">
-                        <li>
-                          <Link href="#" >
-                            Admin
-                          </Link>
-                        </li>
-                        <li>August 15, 2022</li>
-                      </ul>
+                    <div className="blog-post-content">
                       <h3>
                         <Link href="/blog/blog-details/" >
-                          The security risks of changing package owners
+                          The Security Risks of Changing Package Owners
                         </Link>
                       </h3>
+
+                      <span>
+                        By{" "}
+                        <Link href="#" >
+                          Admin
+                        </Link>
+                      </span>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                      </p>
 
                       <Link
                         href="/blog/blog-details/"
                         className="read-more-btn"
                         
                       >
-                        Read More <Icon.PlusCircle />
+                        Read More <Icon.ArrowRight />
                       </Link>
                     </div>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-md-6">
-                  <div className="single-blog-post-item">
-                    <div className="post-image">
+                  <div className="single-blog-post">
+                    <div className="blog-image">
                       <Link href="/blog/blog-details/" >
                         <Image
                           src={blogImg2}
@@ -76,37 +80,46 @@ const BlogWithRightSidebarStyle3 = () => {
                           height={700}
                         />
                       </Link>
+
+                      <div className="date">
+                        <Icon.Calendar /> March 17, 2022
+                      </div>
                     </div>
 
-                    <div className="post-content">
-                      <ul className="post-meta">
-                        <li>
-                          <Link href="#" >
-                            Admin
-                          </Link>
-                        </li>
-                        <li>August 15, 2022</li>
-                      </ul>
+                    <div className="blog-post-content">
                       <h3>
                         <Link href="/blog/blog-details/" >
                           Tips to Protecting Your Business and Family
                         </Link>
                       </h3>
 
+                      <span>
+                        By{" "}
+                        <Link href="#" >
+                          Smith
+                        </Link>
+                      </span>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                      </p>
+
                       <Link
                         href="/blog/blog-details/"
                         className="read-more-btn"
                         
                       >
-                        Read More <Icon.PlusCircle />
+                        Read More <Icon.ArrowRight />
                       </Link>
                     </div>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-md-6">
-                  <div className="single-blog-post-item">
-                    <div className="post-image">
+                  <div className="single-blog-post">
+                    <div className="blog-image">
                       <Link href="/blog/blog-details/" >
                         <Image
                           src={blogImg3}
@@ -115,37 +128,46 @@ const BlogWithRightSidebarStyle3 = () => {
                           height={700}
                         />
                       </Link>
+
+                      <div className="date">
+                        <Icon.Calendar /> March 19, 2022
+                      </div>
                     </div>
 
-                    <div className="post-content">
-                      <ul className="post-meta">
-                        <li>
-                          <Link href="#" >
-                            Admin
-                          </Link>
-                        </li>
-                        <li>August 15, 2022</li>
-                      </ul>
+                    <div className="blog-post-content">
                       <h3>
                         <Link href="/blog/blog-details/" >
                           Protect Your Workplace from Cyber Attacks
                         </Link>
                       </h3>
 
+                      <span>
+                        By{" "}
+                        <Link href="#" >
+                          John
+                        </Link>
+                      </span>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                      </p>
+
                       <Link
                         href="/blog/blog-details/"
                         className="read-more-btn"
                         
                       >
-                        Read More <Icon.PlusCircle />
+                        Read More <Icon.ArrowRight />
                       </Link>
                     </div>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-md-6">
-                  <div className="single-blog-post-item">
-                    <div className="post-image">
+                  <div className="single-blog-post">
+                    <div className="blog-image">
                       <Link href="/blog/blog-details/" >
                         <Image
                           src={blogImg4}
@@ -154,37 +176,46 @@ const BlogWithRightSidebarStyle3 = () => {
                           height={700}
                         />
                       </Link>
+
+                      <div className="date">
+                        <Icon.Calendar /> March 15, 2022
+                      </div>
                     </div>
 
-                    <div className="post-content">
-                      <ul className="post-meta">
-                        <li>
-                          <Link href="#" >
-                            Admin
-                          </Link>
-                        </li>
-                        <li>August 15, 2022</li>
-                      </ul>
+                    <div className="blog-post-content">
                       <h3>
                         <Link href="/blog/blog-details/" >
-                          The security risks of changing package owners
+                          Here are the 5 most telling signs of micromanagement
                         </Link>
                       </h3>
+
+                      <span>
+                        By{" "}
+                        <Link href="#" >
+                          Admin
+                        </Link>
+                      </span>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                      </p>
 
                       <Link
                         href="/blog/blog-details/"
                         className="read-more-btn"
                         
                       >
-                        Read More <Icon.PlusCircle />
+                        Read More <Icon.ArrowRight />
                       </Link>
                     </div>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-md-6">
-                  <div className="single-blog-post-item">
-                    <div className="post-image">
+                  <div className="single-blog-post">
+                    <div className="blog-image">
                       <Link href="/blog/blog-details/" >
                         <Image
                           src={blogImg5}
@@ -193,37 +224,46 @@ const BlogWithRightSidebarStyle3 = () => {
                           height={700}
                         />
                       </Link>
+
+                      <div className="date">
+                        <Icon.Calendar /> March 17, 2022
+                      </div>
                     </div>
 
-                    <div className="post-content">
-                      <ul className="post-meta">
-                        <li>
-                          <Link href="#" >
-                            Admin
-                          </Link>
-                        </li>
-                        <li>August 15, 2022</li>
-                      </ul>
+                    <div className="blog-post-content">
                       <h3>
                         <Link href="/blog/blog-details/" >
-                          Tips to Protecting Your Business and Family
+                          I Used The Web For A Day On A 50 MB Budget
                         </Link>
                       </h3>
+
+                      <span>
+                        By{" "}
+                        <Link href="#" >
+                          Smith
+                        </Link>
+                      </span>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                      </p>
 
                       <Link
                         href="/blog/blog-details/"
                         className="read-more-btn"
                         
                       >
-                        Read More <Icon.PlusCircle />
+                        Read More <Icon.ArrowRight />
                       </Link>
                     </div>
                   </div>
                 </div>
 
                 <div className="col-lg-6 col-md-6">
-                  <div className="single-blog-post-item">
-                    <div className="post-image">
+                  <div className="single-blog-post">
+                    <div className="blog-image">
                       <Link href="/blog/blog-details/" >
                         <Image
                           src={blogImg6}
@@ -232,29 +272,38 @@ const BlogWithRightSidebarStyle3 = () => {
                           height={700}
                         />
                       </Link>
+
+                      <div className="date">
+                        <Icon.Calendar /> March 19, 2022
+                      </div>
                     </div>
 
-                    <div className="post-content">
-                      <ul className="post-meta">
-                        <li>
-                          <Link href="#" >
-                            Admin
-                          </Link>
-                        </li>
-                        <li>August 15, 2022</li>
-                      </ul>
+                    <div className="blog-post-content">
                       <h3>
-                        <Link href="/blog/blog-details/">
-                          Protect Your Workplace from Cyber Attacks
+                        <Link href="/blog/blog-details/" >
+                          Making Peace With The Feast Or Famine Of Freelancing
                         </Link>
                       </h3>
+
+                      <span>
+                        By{" "}
+                        <Link href="#" >
+                          John
+                        </Link>
+                      </span>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                      </p>
 
                       <Link
                         href="/blog/blog-details/"
                         className="read-more-btn"
                         
                       >
-                        Read More <Icon.PlusCircle />
+                        Read More <Icon.ArrowRight />
                       </Link>
                     </div>
                   </div>
@@ -306,29 +355,9 @@ const BlogWithRightSidebarStyle3 = () => {
             </div>
           </div>
         </div>
-
-        {/* Shape Images */}
-        <div className="shape2 rotateme">
-          <Image src={shape1} alt="shape" width={22} height={22} />
-        </div>
-        <div className="shape3">
-          <Image src={shape3} alt="shape" width={28} height={28} />
-        </div>
-        <div className="shape4">
-          <Image src={shape4} alt="shape" width={21} height={20} />
-        </div>
-        <div className="shape6 rotateme">
-          <Image src={shape4} alt="shape" width={21} height={20} />
-        </div>
-        <div className="shape7">
-          <Image src={shape4} alt="shape" width={21} height={20} />
-        </div>
-        <div className="shape8 rotateme">
-          <Image src={shape1} alt="shape" width={22} height={22} />
-        </div>
       </div>
     </>
   );
 };
 
-export default BlogWithRightSidebarStyle3;
+export default BlogWithRightSidebar;

@@ -4,7 +4,7 @@ import React from "react";
 import Link from 'next/link';
 import * as Icon from "react-feather";
 import Image from "next/image";
-import BlogSidebar from "../../components/Blog/BlogSidebar";
+import BlogSidebar from "./BlogSidebar";
 
 import blogDetails from "/public/images/blog-image/blog-details.jpg";
 

@@ -21,8 +21,8 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import AosAnimation from "@/components/Layout/AosAnimation";
-import GoTop from "@/components/Layout/GoTop";
+import AosAnimation from "@/components/legacy/Layout/AosAnimation";
+import GoTop from "@/components/legacy/Layout/GoTop";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
